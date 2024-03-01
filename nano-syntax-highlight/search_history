@@ -1,0 +1,70 @@
+rever
+tab
+marc
+blank
+bold
+M-C
+green
+end
+exec
+M-E
+stripe
+m-k
+ok
+zero
+^\
+spell
+Âa
+^A
+^a
+130
+^N
+Ç
+^R
+mouse
+mark
+M-H
+M-L
+status
+stat
+mini
+M-M
+M-W
+F11
+x11
+print
+e-m
+
+
+ls|dmenu -w $WINDOWID
+history|dmenu -w $WINDOWID
+bash -c "xterm -e '$(cat '/home/jxpx/.local/bin/dmenu-mount' | tail -n 12 | cut -d# -f2-|dmenu -i -l 4)'"
+dmenu-mount
+sed 's/^(?:[\t ]*(?:\r?\n|\r))+//g'
+|dmenu-emoji|dmenu -l 22 -w $WINDOWID|awk '
+echo a|pangoview -subpixel
+echo a|pang-oview -subpixel
+echo a|pango-view -subpixel
+echo a|pango-view -foreground=red
+echo -e "asdasd"|pango-view -foreground=red
+pango-view -foreground=red -text fuck
+pango-view -foreground red -text fuck
+pango-view --foreground red --text fuck
+pango-view --foreground red --text fuck --q
+pango-view --foreground red --text fuck -q
+pango-view --foreground red --text fuck --no-display
+pango-view --foreground red --text fuck -o <(xmessage -file -)
+history|dmenu
+cat .bash_history|dmenu
+cat .bash_history|dmenu -l 12
+dmenu-emoji|dmenu -l 22 -w $WINDOWID|awk '
+dmenu-emoji|dmenu -l 22 -w $WINDOWID
+dmenu-emoji|dmenu -l 12 -w $WINDOWID
+xcmenu --dmenu|dmenu -l 12 -w $WINDOWID
+dmenu-nano
+|sed 's/.*/\U&/'
+xerox
+|sed 's/.*/\L&/'
+|xsel -ib
+dmenu-EDITOR
+

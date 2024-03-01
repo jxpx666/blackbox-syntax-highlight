@@ -1,0 +1,72 @@
+syntax "Blackbox" "menu"
+
+# Tables (Github extension)
+#color white "\[exec]\ \(""
+#color white "X11"
+
+#submenu & matching end
+color yellow "[submenu] ["
+color yellow "^{[^$]" end="^}$"
+color yellow "^```$"
+
+# strike-through
+color red "(^|[[:space:]])([^ ][^~]*)"
+
+
+
+color magenta "''[:space:][submenu][:space:]('[a-z])"
+
+
+
+# quotes
+color brightblack  "^>.*"
+
+# Emphasis
+color green "(^|[[:space:]])(_[^ ][^_]*_|\*[^ ][^*]*\*)"
+
+# Strong emphasis
+#color brightgreen "(^|[[:space:]])({[^ ][^_]*}|\*\*[^ ][^*]*\*\*)"
+
+
+
+# horizontal rules
+color brightmagenta "^(---+|===+|___+|\*\*\*+)\s*$"
+
+# headlines
+color brightblack  "^#{1,6}.*"
+
+# lists
+color gray99   "^[nop]]"
+
+# leading whitespace
+color black    "^[[:space:]]+"
+
+
+color black    "([:space:])+"
+
+# misc
+color magenta "\(([CcRr]|[Tt][Mm])\)" "\.{3}" "(^|[[:space:]])\-\-($|[[:space:]])"
+
+# links
+color magenta "\[[^]]+\]"
+color brightblue "\[([^][]|\[[^]]*\])*\]\([^)]+\)"
+
+# images
+color magenta "!\[[^][]*\](\([^)]+\)|\[[^]]+\])"
+	
+# urls
+color brightyellow "https?://[^ )>]+"
+
+color white "[:space:]{[.*?]}"
+
+color white "{[^~]+}"
+
+color white  "{[.*]}"
+
+# code
+color yellow "[`[^`]*`|^ {4}[^-+*].*"
+
+
+
+## Trailing spaces
+#color ,green "[[:space:]]+$"

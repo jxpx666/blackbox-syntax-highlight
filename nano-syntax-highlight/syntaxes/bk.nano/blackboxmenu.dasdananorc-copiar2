@@ -1,0 +1,16 @@
+syntax "Blackbox" "menu"
+
+#color bold,blue "\[\e\x\e\c\]\ \([[:alnum:]\)"
+#color ,green "\[exec] ([[:space:]]\}+$"
+
+# Syntax
+color bold,red "\[\n\o\p\]"
+
+# Keywords
+color bold,red "X11|Blackbox"
+
+# [workspaces] [sep] [reconfig] [config] [restart] 
+
+# Errors
+color ,green "[[:space:]]+$"
+color ,green "[[:space:]]\}+$"

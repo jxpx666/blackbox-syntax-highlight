@@ -1,0 +1,258 @@
+## stop at word ends instead of at beginnings.
+
+## === Nano Settings ===
+
+# File Handling
+set backup
+set backupdir "/home/jxpx/.local/share/nano/backups"
+set historylog
+set positionlog
+
+# Various
+set zap
+set smarthome
+set bookstyle
+set speller "aspell -x -c"
+set magic
+
+# Information
+set constantshow
+set indicator
+set linenumbers
+set stateflags
+
+# Toggle
+set quickblank
+set showcursor
+set nonewlines
+set softwrap
+set mouse
+
+# Editing
+set atblanks
+set tabsize 4
+set boldtext
+
+## === Nano coloring ===
+
+# set titlecolor black,white
+# set promptcolor black,yellow
+# set statuscolor black,white
+# set errorcolor red,yellow
+# set spotlightcolor black,orange
+# set selectedcolor black,magenta
+# set stripecolor yellow
+# set scrollercolor yellow
+# set numbercolor red
+# set keycolor black,white
+# set functioncolor white
+
+## User Original Style
+# set titlecolor bold,white,blue
+# set promptcolor lightwhite,grey
+# set statuscolor bold,white,green
+# set errorcolor bold,white,red
+# set spotlightcolor black,lightyellow
+# set selectedcolor lightwhite,magenta
+# set stripecolor ,yellow
+# set scrollercolor cyan
+# set numbercolor cyan
+# set keycolor cyan
+# set functioncolor green
+
+## Root Original Style
+# set titlecolor bold,white,magenta
+# set promptcolor black,yellow
+# set statuscolor bold,white,magenta
+# set errorcolor bold,white,red
+# set spotlightcolor black,orange
+# set selectedcolor lightwhite,cyan
+# set stripecolor ,yellow
+# set scrollercolor magenta
+# set numbercolor magenta
+# set keycolor lightmagenta
+# set functioncolor magenta
+
+## Colors Allowed: pink, purple, mauve, lagoon, mint, lime, peach, orange, latte, rosy, beet, plum, sea, sky, slate, teal, sage, brown, ocher, sand, tawny, brick, crimson, : red, green, blue, magenta, yellow, cyan, white, and black
+
+set titlecolor bold,white
+set statuscolor white
+set promptcolor black,yellow
+set minicolor bold,white
+set errorcolor red,yellow
+set spotlightcolor bold,white,red
+set selectedcolor italic,black,yellow
+set stripecolor yellow
+set scrollercolor yellow
+set numbercolor white
+set keycolor bold,white
+set functioncolor white
+
+## === Syntax coloring ===
+
+include "/usr/share/nano/*.nanorc"
+include "/usr/share/nano/extra/*.nanorc"
+include "/home/jxpx/.local/share/nano/syntaxes/*.nanorc"
+
+## === Key bindings ===
+
+# File Handling
+bind ^W writeout all
+bind ^O insert all
+bind ^S savefile all
+bind Sh-M-B backup all
+
+# Application
+bind F2 exit all
+bind ^c cancel yesno
+bind F5 refresh all
+
+# Editing
+#unbind ^C all
+bind ^X cut all
+#unbind ^V all
+bind ^Z undo all
+bind ^Y redo all
+bind ^H chopwordleft main
+bind Sh-M-X cutrestoffile all
+bind Sh-M-M mark main
+bind ^Space complete main
+
+# Operations
+bind ^E execute main
+bind M-Space execute main
+bind M-1 wordcount main
+bind M-2 location main
+
+# Search and Replace
+bind F3 whereis main
+bind ^F whereis main
+bind ^N findnext main
+bind ^P findprevious main
+bind ^R replace main
+bind ^S casesens replace
+bind ^X regexp replace
+
+# Information
+bind F1 help all
+bind F1 exit help
+
+# Moving Around
+bind ^G gotoline all
+bind Sh-M-H beginpara main
+bind Sh-M-L endpara main
+#bind Sh-M-J prevblock main
+#bind Sh-M-K nextblock main
+bind ^A anchor main
+bind Sh-M-H prevanchor main
+bind Sh-M-L nextanchor main
+
+# Toggle
+
+bind F8 zero all
+bind F9 softwrap all
+bind F10 linenumbers all
+bind F11 whitespacedisplay all
+bind F12 nosyntax all
+
+#bind F21 formatter all
+#bind F6 nohelp all
+#bind F19 speller all
+# Mark
+#bind M-Space speller main
+#bind M-K comment main
+# Browser
+#bind F4 browser main
+#bind ^S gotodir browser
+#bind ^P firstfile browser
+#bind ^N lastfile browser
+# bind F20 linter all
+# bind ^@ suspend all
+# bind ^T center all
+# bind F7 constantshow all
+# bind F15 cutfromcursor all
+# bind F13 smarthome all
+# bind F14 autoindent all
+# bind F16 breaklonglines all
+# bind F17 tabstospaces all
+# bind F18 mouse all
+#cutrestoffile
+#append
+#prepend
+#backupd
+#cutfromcursor
+#breaklonglines
+#bind Sh-M-S backup main
+
+## === Nano Execute ===
+
+bind M-U "{nextword}{mark}{prevword}{execute}|sed 's/.*/\U&/'{enter}" main
+bind M-L "{nextword}{mark}{prevword}{execute}|sed 's/.*/\L&/'{enter}" main
+bind ^C "{execute}|xsel -ib{enter}{undo}" main
+bind ^V "xerox{enter}" main
+
+#bind M-E "{nextword}{mark}{prevword}{execute}|dmenu-nano -p{enter}" main
+
+## === Nano Unbindgs ===
+
+unbind F4 all
+unbind ^K all
+unbind M-E all
+#unbind ^A all
+#unbind F7 all
+unbind M-F all
+unbind M-B all
+unbind M-3 all
+unbind M-, all
+unbind M-. all
+unbind M-- all
+unbind M-+ all
+unbind M-7 all
+unbind M-8 all
+unbind M-9 all
+unbind M-K all
+unbind M-I all
+unbind M-X all
+unbind M-C all
+unbind M-0 all
+unbind ^U all
+unbind ^\ all
+unbind ^/ all
+unbind M-A all
+unbind M-^ all
+unbind M-Q all
+#unbind M-W all
+unbind M-O all
+#unbind F11 all
+unbind M-B all
+unbind M-F all
+unbind M-R all
+unbind M-G all
+unbind M-] all
+unbind M-Q all
+unbind M-_ all
+unbind M-= all
+unbind M-< all
+unbind M-> all
+unbind M-) all
+unbind M-( all
+unbind ^L all
+unbind M-6 all
+unbind ^Q all
+unbind ^B all
+unbind M-T all
+unbind M-J all
+unbind M-V all
+unbind M-} all
+unbind M-{ all
+#unbind M-D all
+unbind ^] all
+unbind M-; all
+unbind M-: all
+unbind Ins all
+unbind ^J all
+unbind Sh-M-S all
+unbind ^^ all
+unbind M-\ all
+unbind M-/ all
+unbind M-M all
